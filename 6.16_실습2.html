@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      img {
+        width: 300px;
+        height: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="/6.16/images/1.jpg" alt="img" id="image" />
+    <!-- 1.jpg ~ 5.jpg 이미지 랜덤변환 -->
+
+    <script>
+      let img = document.getElementById("image");
+
+      img.addEventListener("click", clickHandler);
+
+      function clickHandler() {
+        let num = Math.ceil(Math.random() * 5);
+        img.src = `/6.16/images/${num}.jpg`;
+      }
+    </script>
+  </body>
+</html>

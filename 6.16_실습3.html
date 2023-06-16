@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="timer"></div>
+    <!-- 실시간 시계 -->
+    <script>
+      let timer = document.getElementById("timer");
+
+      setInterval(() => {
+        let time = Date.now();
+        let set = new Date();
+        set.setTime(time);
+        timer.innerHTML = set;
+      }, 1000);
+    </script>
+  </body>
+</html>
