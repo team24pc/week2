@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas: "sfac sfac one . . . .";
+        height: 10vh;
+        align-items: center;
+        justify-items: center;
+        font-weight: bold;
+        position: sticky;
+      }
+      .one {
+        grid-area: one;
+      }
+
+    .sfac {
+        grid-area: sfac;
+        display: flex;
+        justify-content: center;
+    }
+    .sfac img {
+        width: 50%;
+    }
+    .container div {
+        font-size: 14px;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="sfac"><img src="./sfac.svg" alt="" /></div>
+      <div class="one">스펙소개</div>
+      <div>교육과정</div>
+      <div>공지사항</div>
+      <div>수료생 커뮤니티</div>
+      <div>협력사</div>
+      <div>스팩블로그</div>
+    </div>
+  </body>
+</html>
