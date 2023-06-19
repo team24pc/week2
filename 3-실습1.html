@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            font-size: 12pt;
+        }
+    </style>
+</head>
+<body>
+    <input id="num1" type="text">
+    <input id="num2" type="text">
+    <div class="buttons">
+        <button id="add" value="+">+</button>
+        <button id="sub" value="-">-</button>
+        <button id="mul" value="*">x</button>
+        <button id="div" value="/">÷</button>
+    </div>
+    <p id="result-info"></p>
+</body>
+<script>
+    const buttons = document.querySelector(".buttons");
+    buttons.addEventListener("click", (event) => {
+        console.log(event.target.value);
+        const num1 = parseInt(document.getElementById("num1").value);
+        const num2 = parseInt(document.getElementById("num2").value);
+        let result;
+        switch (event.target.value) {
+            case '+':
+                result = num1 + num2;
+                break;
+            case '-':
+                result = num1 - num2;
+                break;
+            case '*':
+                result = num1 * num2;
+                break;
+            case '/':
+                result = num1 / num2;
+                break;
+            default:
+                break;
+        }
+        if (event.target.value) {
+            const resultInfo = document.getElementById("result-info");
+            resultInfo.innerText = `결과: ${result}`;
+        }
+    });
+</script>
+</html>
