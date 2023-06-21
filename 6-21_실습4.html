@@ -13,7 +13,7 @@
 
     <script type="text/babel">
       function App() {
-        const [idx, setIdx] = React.useState(1);
+        const [idx, setIdx] = React.useState(0);
         const images = [
           "/6.21/images/1.jpg",
           "/6.21/images/2.jpg",
@@ -22,14 +22,14 @@
           "/6.21/images/5.jpg",
         ];
         function clickHandler() {
-          const randomIdx = Math.ceil(Math.random() * images.length);
+          const randomIdx = Math.ceil(Math.random() * images.length - 1);
           setIdx(randomIdx);
         }
 
         return (
           <div>
             <img
-              src={`/6.21/images/${idx}.jpg`}
+              src={images[idx]}
               alt=""
               onClick={clickHandler}
               width="300px"
